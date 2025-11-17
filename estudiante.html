@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modo Estudiante – Memoria USB</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body class="theme-dark">
+  
+<header class="top-bar" aria-label="Barra de navegación principal">
+  <div class="brand">
+    <span class="brand-logo">💾</span>
+    <span class="brand-title">USB Flash Drive XR Lab</span>
+  </div>
+  <nav class="controls" aria-label="Controles inclusivos">
+    <button class="ctrl-btn" data-action="go-home" title="Inicio (🏠)">🏠</button>
+    <button class="ctrl-btn" data-action="toggle-reader" title="Lector en voz alta (🗣️)">🗣️</button>
+    <button class="ctrl-btn" data-action="toggle-theme" title="Cambiar tema claro/oscuro (🌓)">🌓</button>
+    <button class="ctrl-btn" data-action="font-inc" title="Aumentar tamaño de letra (A+)">A+</button>
+    <button class="ctrl-btn" data-action="font-dec" title="Disminuir tamaño de letra (A−)">A−</button>
+    <button class="ctrl-btn" data-action="toggle-lang" title="Cambiar idioma (🌐)">🌐</button>
+    <button class="ctrl-btn" data-action="focus-mode" title="Modo foco / sin distracciones (🧠)">🧠</button>
+    <button class="ctrl-btn" data-action="open-search" title="Buscar en la página (🔍)">🔍</button>
+  </nav>
+</header>
+
+  <main id="main-content" class="container">
+    <section class="card">
+      <h1>🎓 Modo Estudiante – Memoria USB</h1>
+      <p>
+        En esta sección podrás aprender qué es una memoria USB, sus partes, usos cotidianos y buenas
+        prácticas para cuidarla. Explora el modelo 3D, responde el quiz y completa el ticket de salida.
+      </p>
+    </section>
+
+    <section class="grid grid-2">
+      <article class="card micro">
+        <h2>💡 Recordatorio rápido</h2>
+        <p>
+          Una memoria USB es un dispositivo de almacenamiento portátil que utiliza memoria flash para
+          guardar información. Es pequeña, liviana y se conecta mediante un puerto USB.
+        </p>
+      </article>
+
+      <article class="card micro">
+        <h2>🧱 Partes principales</h2>
+        <ul>
+          <li><strong>Conector USB:</strong> pieza metálica que se inserta en el puerto del computador.</li>
+          <li><strong>Cuerpo plástico o metálico:</strong> protege la memoria flash interna.</li>
+          <li><strong>Indicador LED (en algunos modelos):</strong> muestra cuando está leyendo o escribiendo datos.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>👁️ Explora el modelo 3D</h2>
+      <p>Gira el modelo, haz zoom y observa con detalle cómo es una memoria USB.</p>
+      <model-viewer src="../assets/models/usb_flash_drive.glb" camera-controls autoplay ar ar-modes="webxr scene-viewer quick-look"
+                    shadow-intensity="0.8" exposure="0.9"
+                    style="width: 100%; height: 320px; border-radius: 1rem; overflow: hidden; background:#000;">
+        <div class="mv-fallback">Tu navegador no soporta el visor 3D.</div>
+      </model-viewer>
+      <div class="pill-row">
+        <a href="viewer3D/usb3d.html" class="pill-btn">👁️ Abrir visor 3D</a>
+        <a href="viewerAR/usb-ar.html" class="pill-btn">📱 Ver en AR</a>
+        <a href="viewerVR/usb-vr.html" class="pill-btn">🥽 Modo VR</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🔐 Buenas prácticas y seguridad</h2>
+      <ul class="checklist">
+        <li>✅ Expulsa la memoria USB de forma segura antes de retirarla.</li>
+        <li>✅ Evita golpearla o doblarla cuando está conectada.</li>
+        <li>✅ No la prestes a personas desconocidas: podría contener virus.</li>
+        <li>✅ Realiza copias de seguridad: ninguna memoria es eterna.</li>
+      </ul>
+    </section>
+
+    <section id="quiz-usb" class="card">
+      <h2>🧪 Quiz formativo – USB</h2>
+      <p>Responde las siguientes preguntas. Al final podrás ver tu puntaje y descargar tus respuestas.</p>
+      <form id="quiz-form">
+        <div class="quiz-item">
+          <p><strong>1.</strong> ¿Qué tipo de dispositivo es una memoria USB?</p>
+          <label><input type="radio" name="q1" value="a" /> a) Un dispositivo de salida</label>
+          <label><input type="radio" name="q1" value="b" /> b) Un dispositivo de almacenamiento</label>
+          <label><input type="radio" name="q1" value="c" /> c) Un dispositivo de entrada</label>
+        </div>
+
+        <div class="quiz-item">
+          <p><strong>2.</strong> ¿Qué acción es la más segura antes de retirar la memoria USB?</p>
+          <label><input type="radio" name="q2" value="a" /> a) Tirar del cable con cuidado</label>
+          <label><input type="radio" name="q2" value="b" /> b) Expulsarla desde el sistema operativo</label>
+          <label><input type="radio" name="q2" value="c" /> c) Apagar el monitor</label>
+        </div>
+
+        <div class="quiz-item">
+          <p><strong>3.</strong> ¿Para qué sirve principalmente una memoria USB?</p>
+          <label><input type="radio" name="q3" value="a" /> a) Conectarse a internet</label>
+          <label><input type="radio" name="q3" value="b" /> b) Guardar y trasladar archivos</label>
+          <label><input type="radio" name="q3" value="c" /> c) Mejorar la calidad de la pantalla</label>
+        </div>
+
+        <button type="button" class="btn primary" id="quiz-submit">Calcular puntaje</button>
+      </form>
+      <div id="quiz-result" class="quiz-result" aria-live="polite"></div>
+      <button type="button" class="btn ghost" id="quiz-download">⬇️ Descargar respuestas (.csv)</button>
+    </section>
+
+    <section id="ticket-salida" class="card">
+      <h2>🎟️ Ticket de salida</h2>
+      <p>Completa este ticket de salida para cerrar la clase.</p>
+      <label for="ticket-nombre">Nombre:</label>
+      <input id="ticket-nombre" type="text" placeholder="Escribe tu nombre..." />
+
+      <label for="ticket-pregunta">En una frase, ¿qué es lo más importante que aprendiste hoy sobre la memoria USB?</label>
+      <textarea id="ticket-pregunta" rows="3"></textarea>
+
+      <button type="button" class="btn primary" id="ticket-download">⬇️ Descargar ticket (.txt)</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Modo Estudiante – Memoria USB · USB Flash Drive XR Lab.</p>
+  </footer>
+
+  <script src="js/accessibility.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

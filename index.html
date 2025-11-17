@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USB Flash Drive XR Lab</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#050816" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js').catch(console.error);
+      });
+    }
+  </script>
+</head>
+<body class="theme-dark">
+  
+<header class="top-bar" aria-label="Barra de navegación principal">
+  <div class="brand">
+    <span class="brand-logo">💾</span>
+    <span class="brand-title">USB Flash Drive XR Lab</span>
+  </div>
+  <nav class="controls" aria-label="Controles inclusivos">
+    <button class="ctrl-btn" data-action="go-home" title="Inicio (🏠)">🏠</button>
+    <button class="ctrl-btn" data-action="toggle-reader" title="Lector en voz alta (🗣️)">🗣️</button>
+    <button class="ctrl-btn" data-action="toggle-theme" title="Cambiar tema claro/oscuro (🌓)">🌓</button>
+    <button class="ctrl-btn" data-action="font-inc" title="Aumentar tamaño de letra (A+)">A+</button>
+    <button class="ctrl-btn" data-action="font-dec" title="Disminuir tamaño de letra (A−)">A−</button>
+    <button class="ctrl-btn" data-action="toggle-lang" title="Cambiar idioma (🌐)">🌐</button>
+    <button class="ctrl-btn" data-action="focus-mode" title="Modo foco / sin distracciones (🧠)">🧠</button>
+    <button class="ctrl-btn" data-action="open-search" title="Buscar en la página (🔍)">🔍</button>
+  </nav>
+</header>
+
+  <main id="main-content" class="container">
+    <section class="hero card">
+      <div class="hero-text">
+        <h1>💾 ¿Qué es una memoria USB?</h1>
+        <p>
+          Una memoria USB es un dispositivo de almacenamiento portátil que utiliza tecnología de memoria
+          flash. Es pequeña, tiene un conector USB y permite transferir y almacenar archivos fácilmente.
+          Con una gran capacidad de almacenamiento y velocidades de transferencia de datos rápidas, es una
+          herramienta práctica para realizar copias de seguridad y compartir archivos en cualquier lugar.
+          Es compatible con diversos dispositivos y se utiliza ampliamente con fines personales,
+          profesionales y educativos.
+        </p>
+        <div class="hero-actions">
+          <a href="estudiante.html" class="btn primary">🎓 Modo Estudiante</a>
+          <a href="login-docente.html" class="btn secondary">👩‍🏫 Modo Docente</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-chip">XR Ready</div>
+        <div class="hero-illustration">
+          <div class="usb-body"></div>
+          <div class="usb-head"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-3">
+      <article class="card micro">
+        <h2>👁️ 3D – Modelo interactivo</h2>
+        <p>Gira y acerca el modelo 3D de la memoria USB para reconocer sus partes principales.</p>
+        <a href="viewer3D/usb3d.html" class="btn ghost">Abrir visor 3D</a>
+      </article>
+
+      <article class="card micro">
+        <h2>📱 AR – Ver en tu espacio</h2>
+        <p>Proyecta la memoria USB en realidad aumentada sobre tu escritorio o cuaderno.</p>
+        <a href="viewerAR/usb-ar.html" class="btn ghost">Abrir visor AR</a>
+      </article>
+
+      <article class="card micro">
+        <h2>🥽 VR – Explora en grande</h2>
+        <p>Ingresa a una vista inmersiva y observa la memoria USB en escala gigante.</p>
+        <a href="viewerVR/usb-vr.html" class="btn ghost">Abrir visor VR</a>
+      </article>
+
+      <article class="card micro">
+        <h2>🧪 Quiz rápido</h2>
+        <p>Evalúa tus aprendizajes con un breve quiz formativo sobre memorias USB.</p>
+        <a href="estudiante.html#quiz-usb" class="btn ghost">Hacer el quiz</a>
+      </article>
+
+      <article class="card micro">
+        <h2>✅ Registro CSV</h2>
+        <p>Docente: descarga la plantilla CSV para registrar resultados y evidencias.</p>
+        <a href="docs/registro_usb_template.csv" class="btn ghost">Descargar plantilla</a>
+      </article>
+
+      <article class="card micro">
+        <h2>🎟️ Ticket de salida</h2>
+        <p>Responde una pregunta clave antes de terminar la clase y deja tu huella.</p>
+        <a href="estudiante.html#ticket-salida" class="btn ghost">Ir al ticket</a>
+      </article>
+    </section>
+  </main>
+
+  <div id="search-dialog" class="search-dialog" hidden>
+    <div class="search-box card">
+      <h2>🔍 Buscar en la página</h2>
+      <input type="search" id="search-input" placeholder="Escribe una palabra clave..." />
+      <button class="btn primary" id="search-close">Cerrar</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Hecho con 💜 para el aula inclusiva – USB Flash Drive XR Lab.</p>
+  </footer>
+
+  <script src="js/accessibility.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "USB Flash Drive XR Lab",
+  "short_name": "USB XR Lab",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "icons": []
+}

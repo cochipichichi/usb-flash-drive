@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso Docente – Memoria USB</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="theme-dark">
+  
+<header class="top-bar" aria-label="Barra de navegación principal">
+  <div class="brand">
+    <span class="brand-logo">💾</span>
+    <span class="brand-title">USB Flash Drive XR Lab</span>
+  </div>
+  <nav class="controls" aria-label="Controles inclusivos">
+    <button class="ctrl-btn" data-action="go-home" title="Inicio (🏠)">🏠</button>
+    <button class="ctrl-btn" data-action="toggle-reader" title="Lector en voz alta (🗣️)">🗣️</button>
+    <button class="ctrl-btn" data-action="toggle-theme" title="Cambiar tema claro/oscuro (🌓)">🌓</button>
+    <button class="ctrl-btn" data-action="font-inc" title="Aumentar tamaño de letra (A+)">A+</button>
+    <button class="ctrl-btn" data-action="font-dec" title="Disminuir tamaño de letra (A−)">A−</button>
+    <button class="ctrl-btn" data-action="toggle-lang" title="Cambiar idioma (🌐)">🌐</button>
+    <button class="ctrl-btn" data-action="focus-mode" title="Modo foco / sin distracciones (🧠)">🧠</button>
+    <button class="ctrl-btn" data-action="open-search" title="Buscar en la página (🔍)">🔍</button>
+  </nav>
+</header>
+
+  <main id="main-content" class="container narrow">
+    <section class="card">
+      <h1>👩‍🏫 Acceso Docente</h1>
+      <p>
+        Esta sección está pensada para docentes. Incluye rúbrica, guía, prueba formativa y recursos
+        descargables. Ingresa la clave entregada en la planificación.
+      </p>
+      <label for="docente-pass">Clave docente:</label>
+      <input id="docente-pass" type="password" autocomplete="off" />
+      <div class="inline-row">
+        <button class="btn primary" id="docente-login">Ingresar</button>
+        <button class="btn ghost" id="docente-toggle-pass">👁️ Ver/Ocultar</button>
+      </div>
+      <p class="hint">Sugerencia: puedes cambiar la clave directamente en el archivo <code>js/docente.js</code>.</p>
+      <p id="docente-error" class="error-msg" aria-live="polite"></p>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Acceso Docente – Memoria USB.</p>
+  </footer>
+  <script src="js/accessibility.js"></script>
+  <script src="js/docente.js"></script>
+</body>
+</html>

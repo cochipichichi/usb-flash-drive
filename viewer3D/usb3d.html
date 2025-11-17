@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visor 3D – Memoria USB</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body class="theme-dark">
+  
+<header class="top-bar" aria-label="Barra de navegación principal">
+  <div class="brand">
+    <span class="brand-logo">💾</span>
+    <span class="brand-title">USB Flash Drive XR Lab</span>
+  </div>
+  <nav class="controls" aria-label="Controles inclusivos">
+    <button class="ctrl-btn" data-action="go-home" title="Inicio (🏠)">🏠</button>
+    <button class="ctrl-btn" data-action="toggle-reader" title="Lector en voz alta (🗣️)">🗣️</button>
+    <button class="ctrl-btn" data-action="toggle-theme" title="Cambiar tema claro/oscuro (🌓)">🌓</button>
+    <button class="ctrl-btn" data-action="font-inc" title="Aumentar tamaño de letra (A+)">A+</button>
+    <button class="ctrl-btn" data-action="font-dec" title="Disminuir tamaño de letra (A−)">A−</button>
+    <button class="ctrl-btn" data-action="toggle-lang" title="Cambiar idioma (🌐)">🌐</button>
+    <button class="ctrl-btn" data-action="focus-mode" title="Modo foco / sin distracciones (🧠)">🧠</button>
+    <button class="ctrl-btn" data-action="open-search" title="Buscar en la página (🔍)">🔍</button>
+  </nav>
+</header>
+
+  <main id="main-content" class="container">
+    <section class="card">
+      <h1>👁️ Visor 3D – Memoria USB</h1>
+      <model-viewer src="../assets/models/usb_flash_drive.glb" camera-controls autoplay
+                    shadow-intensity="1" style="width:100%;height:360px;border-radius:1rem;background:#000;">
+      </model-viewer>
+      <p>Usa el mouse o tu dedo para girar, acercar y alejar el modelo de la memoria USB.</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Visor 3D – USB Flash Drive XR Lab.</p>
+  </footer>
+  <script src="../js/accessibility.js"></script>
+</body>
+</html>
